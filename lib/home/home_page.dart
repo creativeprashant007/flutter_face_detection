@@ -31,9 +31,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: SmartFaceCamera(
           autoCapture: true,
+          showCameraLensControl: false,
           defaultCameraLens: CameraLens.front,
-          message: 'Center your face in the square',
           onCapture: (File? image) {},
+          showFlashControl: false,
+          defaultFlashMode: CameraFlashMode.off,
+          onFaceDetected: (Face? face) {},
         ));
   }
 }
